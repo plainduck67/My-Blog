@@ -8,7 +8,7 @@
       overflow-x: hidden;
       position: relative;
       height: 100vh;
-      background-image: url('orange.avif');
+      background-image: url('malard.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -16,11 +16,11 @@
     }
 
     h1 {
-      background: #FFB86C;
+      background: #0a6a3a;
       padding: 20px;
       text-align: center;
       font-size: 2em;
-      text-shadow: 1px 1px 0 #993D00;
+      text-shadow: 1px 1px 0 #442b01;
       border-bottom: 3px dotted #fff;
       position: relative;
       z-index: 10;
@@ -38,12 +38,12 @@
       font-weight: bold;
       text-decoration: none;
       color: #fff;
-      text-shadow: 1px 1px 0 #AA5500;
+      text-shadow: 1px 1px 0 #5a2d00;
     }
 
     a:hover, button:hover {
-      color: #FFFF88;
-      text-shadow: 0 0 10px #FFFF88;
+      color: #0a6a3a;
+      text-shadow: 0 0 10px #0a6a3a;
     }
 
     #customCursor {
@@ -56,17 +56,6 @@
       transition: transform 0.05s ease;
     }
 
-    .dewdrop {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background: rgba(255, 200, 150, 0.7);
-      border-radius: 50%;
-      box-shadow: 0 0 8px 2px rgba(255, 180, 100, 0.6);
-      animation: drop-fade 4s infinite;
-      pointer-events: none;
-      z-index: 5;
-    }
 
     @keyframes drop-fade {
       0% {
@@ -89,8 +78,8 @@
     .blog {
       max-width: 700px;
       margin: 20px auto;
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid #FFC943;
+      background: rgba(167, 139, 0, 0.1);
+      border: 2px solid #0a6a3a;
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
@@ -103,6 +92,6 @@
     }
 
     .blog-card p {
-      color: #fffad1;
+      color: #ffffff;
       font-size: 1em;
     }
