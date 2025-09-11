@@ -11,11 +11,19 @@ if ! command -v dotnet >/dev/null 2>&1; then
         rm packages-microsoft-prod.deb
     elif [ -f /etc/redhat-release ]; then
         sudo dnf install -y dotnet-sdk-8.0
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS
+        if ! command -v brew >/dev/null 2>&1; then
+            echo "Homebrew not found. Installing Homebrew first..."
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        fi
+        brew install --cask dotnet-sdk
     else
         echo "Unsupported distro. Install .NET manually."
         exit 1
     fi
 fi
+
 
 if ! command -v git >/dev/null 2>&1; then
     echo "Git not found, installing..."
@@ -23,11 +31,19 @@ if ! command -v git >/dev/null 2>&1; then
         sudo apt-get install -y git
     elif [ -f /etc/redhat-release ]; then
         sudo dnf install -y git
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        
+        if ! command -v brew >/dev/null 2>&1; then
+            echo "Homebrew not found. Installing Homebrew first..."
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        fi
+        brew install git
     else
         echo "Unsupported distro. Install Git manually."
         exit 1
     fi
 fi
+
 
 cd ~
 rm -rf sorter
