@@ -37,6 +37,7 @@ cd ~
 mkdir sorter
 cd sorter
 git clone https://github.com/plainduck67/fileSorter
-cd fileSorter/sorter
+cd fileSorter
+cd sorter
 dotnet run
 
