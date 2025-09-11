@@ -33,9 +33,14 @@ cd ~
 rm -rf sorter
 mkdir sorter
 cd sorter
+
 git clone https://github.com/plainduck67/fileSorter
 cd fileSorter/sorter
 
-dotnet build
+dotnet build || true
+
+
 read -p "What would you like to sort (photos, music, videos)? " target
+
+
 dotnet run -- --"$target"
