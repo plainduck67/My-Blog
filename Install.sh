@@ -39,5 +39,6 @@ cd sorter
 git clone https://github.com/plainduck67/fileSorter
 cd fileSorter
 cd sorter
+dotnet build
 dotnet run
 
