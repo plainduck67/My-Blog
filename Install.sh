@@ -39,7 +39,6 @@ cd sorter
 git clone https://github.com/plainduck67/fileSorter
 cd fileSorter
 cd sorter
-dotnet build
 read -p "What would you like to sort, photos, music or videos?" target
 dotnet run -- --"$target"
 
